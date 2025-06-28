@@ -1,14 +1,7 @@
 package main
 
-import "net/http"
+import "fmt"
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		if r.Method != http.MethodGet {
-			http.Error(w, "иди нахуй", http.StatusBadRequest)
-			return
-		}
-	})
-
-	http.ListenAndServe(":8080", nil)
+	fmt.Println("hello world!")
 }
